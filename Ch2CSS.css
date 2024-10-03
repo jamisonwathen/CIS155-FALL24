@@ -4,7 +4,7 @@ body {
 }
 p { 
   font: normal 18px/1.6 "Helvetica", Arial, sans-serif; 
-  color: #464646; 
+  color: #cc0909; 
 }
 .id { 
   margin-bottom 15px; 
@@ -18,7 +18,7 @@ p {
   border: none 
 }
 .org { 
-  color: #54ba6a; 
+  color: #190c47; 
   text-decoration: underline; 
 
 a { 
