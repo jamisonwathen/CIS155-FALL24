@@ -1,17 +1,29 @@
+h1 {font-size: 3em;
+    color: hotpink;
+    font-family: 'Comic Sans MS', sans-serif;
+    padding: 2em;
+    border: 5px dotted orange;}
 
-h1 {font-size: 2.5em;
-    color: darkblue;
-    text-align: center;
-    font-family: 'helvetica', sans-serif;}
-ul li {font-size: 1.3em;
-    color: darkgreen;
-    margin-bottom: 0.5em;
-    font-family: 'helvetica', sans-serif;}
-main p {font-size: 1.2em;
-    line-height: 1.6em;
+.highlight {background-image: url('https://www.transparenttextures.com/patterns/dark-fish-skin.png'); /* unreadable background */
+    font-style: italic;
+    padding: 1em;
+    margin: -5em;}
+
+ul li {font-size: 2em;
+    color: limegreen;
+    margin-left: -3em;
+    padding-top: 3em;
+    border: 3px solid purple;}
+
+main p {font-size: 1.5em;
+    line-height: 2em;
     color: red;
-    font-family: 'helvetica', sans-serif;}
-#footer-text {color: gray;
+    background-color: yellow;}
+
+#footer-text {color: white;
     text-align: center;
-    font-size: 1em;
-    font-family: 'helvetica', sans-serif;}
+    font-size: 2em;
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(45deg, red, yellow);
+    padding: 1em;
+    border: 10px dashed green;}
