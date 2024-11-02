@@ -1,29 +1,58 @@
-h1 {font-size: 3em;
-    color: hotpink;
-    font-family: 'Comic Sans MS', sans-serif;
-    padding: 2em;
-    border: 5px dotted orange;}
+body {font-family: 'helvetica', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
 
-.highlight {background-image: url('https://www.transparenttextures.com/patterns/dark-fish-skin.png'); /* unreadable background */
-    font-style: italic;
-    padding: 1em;
-    margin: -5em;}
 
-ul li {font-size: 2em;
-    color: limegreen;
-    margin-left: -3em;
-    padding-top: 3em;
-    border: 3px solid purple;}
-
-main p {font-size: 1.5em;
-    line-height: 2em;
-    color: red;
-    background-color: yellow;}
-
-#footer-text {color: white;
+header {background-color: #f0f0f0;
+    padding: 20px;
     text-align: center;
-    font-size: 2em;
-    font-family: 'Comic Sans MS', sans-serif;
-    background: linear-gradient(45deg, red, yellow);
-    padding: 1em;
-    border: 10px dashed green;}
+    border-bottom: 1px solid #ddd;}
+
+.nav-menu {list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;}
+
+.nav-menu li {margin: 0 15px;}
+
+.nav-menu a {text-decoration: none;
+    color: darkblue;
+    font-weight: bold;}
+
+.nav-menu a:hover {text-decoration: underline;}
+
+main {padding: 20px;}
+
+
+.scalable-image {width: 100%;
+    max-width: 900px;
+    height: auto; 
+    display: block;
+    margin: 20px auto;}
+
+
+#footer-text {color: gray;
+    text-align: center;
+    font-size: 1em;
+    font-family: 'Verdana', sans-serif;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;}
+
+.highlight {background-color: lightyellow;
+    font-style: italic;}
+
+
+ul li {font-size: 1.3em;
+    color: darkgreen;
+    margin-bottom: 0.5em;}
+
+
+main p {font-size: 1.2em;
+    line-height: 1.6em;
+    color: black;}
+
+
+* {box-sizing: border-box;}
