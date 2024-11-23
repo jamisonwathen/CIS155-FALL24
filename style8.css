@@ -1,5 +1,5 @@
 
-body {font-family: Arial, sans-serif;
+body {font-family: Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;}
@@ -7,7 +7,7 @@ body {font-family: Arial, sans-serif;
 h1, h2 {text-align: center;
     margin: 20px 0;}
 
-/* Flex container for header */
+/* Flex container for the header */
 .header {display: flex;
     flex-direction: column;
     align-items: center;
