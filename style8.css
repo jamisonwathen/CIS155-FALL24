@@ -1,0 +1,62 @@
+
+body {font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;}
+
+h1, h2 {text-align: center;
+    margin: 20px 0;}
+
+/* Flex container for header */
+.header {display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;}
+
+.nav-menu {display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;}
+
+.nav-menu li a {text-decoration: none;
+    color: #333;}
+
+/* Grid code.  I think this will work on all sheets, at least that is my plan */
+.grid-container {display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;}
+
+.grid-item {padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);}
+
+.scalable-image {max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;}
+
+footer {text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;}
+
+/* Media queries added here.  I think I have the pages are consistent enough to work on every with the same ones, just like the grid. */
+@media (max-width: 768px) {.nav-menu {
+        flex-direction: column;
+        gap: 10px;}
+
+    .header p {font-size: 0.9em;}}
+
+@media (max-width: 480px) {h1 {font-size: 1.5em;}
+
+    .nav-menu {font-size: 0.8em;}
+
+    .grid-container {grid-template-columns: 1fr;}}
