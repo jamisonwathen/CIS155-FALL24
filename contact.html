@@ -4,29 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - My OC Student Activities</title>
-    <link rel="stylesheet" href="Style2.css">
+    <title>F-stop and Shutter Speed  - Main Assignments</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-
-    <header>
-        <h1>Contact Page</h1>
+<body>
+    <header class="header">
+        <h1>Bio</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quick-assignments.html">Quick Assignments</a></li>
+                <li class="dropdown">
+                    <a href="#">Main Assignments</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="textures.html">Textures</a></li>
+                        <li><a href="fstop-and-ss.html">F-Stop and SS</a></li>
+                        <li><a href="window-portrait.html">Window Portrait</a></li>
+                        <li><a href="cell-phone-pictures.html">Cell Phone Pictures</a></li>
+                        <li><a href="sense-of-place.html">Sense of Place</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Bio</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="classes.html">Classes</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <section>       
-        <h2>Page Under Construction</h2>
-    </section>
-    <aside>aside</aside>
+
+    <main class="content">
+        <section class="grid-container">
+            <div class="grid-item">
+                <h2>Contact Information</h2>
+                <p>Feel free to reach out with any questions or feedback!</p>
+                <p>Email: <a href="mailto:jamisonwathen@student.olympic.edu">Jamison Direct</a></p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="grid-item">
+                <h2>Send a Message</h2>
+                <form action="https://formspree.io/f/mnnqbngn" method="POST">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p id="footer-text">© Jamison Wathen 2024</p>
     </footer>
-
+</body>
 
 </html>

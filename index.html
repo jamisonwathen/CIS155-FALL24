@@ -9,40 +9,78 @@
 </head>
 
 <body>
-    <header>
-        <h1>My OC Student Activities</h1>
+    <!-- Header with navigation -->
+    <header class="header">
+        <h1>DMA 136 Photography Activities</h1>
         <nav>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="classes.html">Classes</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="quick-assignments.html">Quick Assignments</a></li>
+                <li class="dropdown">
+                    <a href="#">Main Assignments</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="textures.html">Textures</a></li>
+                        <li><a href="fstop-and-ss.html">F-Stop and SS</a></li>
+                        <li><a href="window-portrait.html">Window Portrait</a></li>
+                        <li><a href="cell-phone-pictures.html">Cell Phone Pictures</a></li>
+                        <li><a href="sense-of-place.html">Sense of Place</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Bio</a></li>
             </ul>
         </nav>
-        <p>I am using this website to display the work I do for classes at Olympic College</p>
     </header>
 
-    <main>
-        <a href="#footer-text">Jump to footer text</a>
-        <h2>Classes I'm going to be posting from:</h2>
-        <ul>
-            <li>Photoshop DMA120</li>
-            <li>Photography DMA136</li>
-            <li>Web Development CIS155</li>
-            <li>I need extra length to my page</li>
-            <li>To show my jump to footer link work.</li>
-            <li>Please zoom in if it is already visible.</li>
-            <li>It really does work.</li>
-        </ul>
-        <h2>Lately my most used computer programs are from:</h2>
-        <p>Adobe Creative Cloud <a href="https://www.adobe.com/creativecloud/plans.html" target="_blank">Link here</a></p>
-        <p>I use photoshop most often.</p>
-        <p>I use lightroom any time I have the ability to batch process pictures.</p>
-        <p>I have been using premiere more often.</p>
-        <p>I am still writing stuff to increase the length of the site.</p>
+    <!-- Main content area -->
+    <main class="content">
 
-        <img src="NL-10.10-LowQuality.gif" alt="Northern Lights" class="scalable-image">
+        <!-- Grid container for gallery and description -->
+        <section class="gallery-grid">
+            <!-- Description on the left -->
+            <div class="gallery-description">
+                <h3>Gallery Description</h3>
+                <p>
+                    This site displays the work done for DMA 136 at Olympic College.  The "Quick Assingments" are just that, short and fast paced assignments done while still working on the larger main assignments.  They are less refined, but much less time intensive. 
+                    <br>
+                    <br>
+                    The Main assingments are much more intensive, working toward a more refined product.  They start simple, showing a basic understanding of camera functions or composition.  They work toward a more comprehensive project, bringing together all of the previously learned topics.
+                    <br>
+                    <br>
+                    I tend to spend a lot of time in the mountains.  While some of the projects in the class let me work that love into the class, most did not.  To the right is a series of pictures from some of my favorite places in the state.  Some are nearby, like Mount Walker.  Others are further away, like Mount Adams as seen from Takhkakh Lake.             
+                </p>
+            </div>
+        
+
+
+<div id="captioned-gallery">
+
+	<figure class="slider">
+		<figure>
+			<img src="Indexpictures/AB-1.jpg" alt>
+			<figcaption>Northern Lights from Walker Mountain</figcaption>
+		</figure>
+		<figure>
+			<img src="Indexpictures/AB-2.jpg" alt>
+			<figcaption>Northern Lights from Walker Mountain</figcaption>
+		</figure>
+		<figure>
+			<img src="Indexpictures/AB-3.jpg" alt>
+			<figcaption>Northern Lights from Hamma Hamma</figcaption>
+		</figure>
+        <figure>
+			<img src="Indexpictures/Chumstick-2.jpg" alt>
+			<figcaption>Chumstick Mountian</figcaption>
+		</figure>
+        <figure>
+			<img src="Indexpictures/Adams.jpg" alt>
+			<figcaption>Mount Adams</figcaption>
+		</figure>
+	</figure>
+</div>
+</section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p id="footer-text">© Jamison Wathen 2024</p>
     </footer>
