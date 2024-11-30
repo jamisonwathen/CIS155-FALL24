@@ -11,7 +11,13 @@ body {margin: 0;
 h1, h2 {text-align: center;
     margin: 20px 0;}
 
-/* Flex containers for the header and nav menu */
+footer {text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;}
+
+
+/* Flex container for the header.*/
 .header {display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,6 +26,8 @@ h1, h2 {text-align: center;
     padding: 20px;
     color: #ffffff;}
 
+
+/* Flex container for the nav.*/
 .nav-menu {display: flex;
     gap: 20px;
     list-style: none;
@@ -48,32 +56,26 @@ h1, h2 {text-align: center;
     display: block;
     margin: 0 auto;}
 
-footer {text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;}
+
 
 /* Media queries added here.  I think I have the pages are consistent enough to work on every with the same ones, just like the grid. */
 @media (max-width: 768px) {.nav-menu {
         flex-direction: column;
         gap: 10px;}
 
-    .header p {font-size: 0.9em;}}
+        .header p {font-size: 0.9em;}}
+        .gallery-grid {grid-template-columns: 1fr;}
+
+    .vertical-gallery img {max-width: 100%;
+        max-height: 120px;}
+    .image-box {grid-template-columns: 1fr;}
 
 @media (max-width: 480px) {h1 {font-size: 1.5em;}
-
     .nav-menu {font-size: 0.8em;}
-
     .grid-container {grid-template-columns: 1fr;}}
-/* Please work this time */
-.nav-menu {display: flex;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-    position: relative;}
 
-    .nav-menu li {position: relative;}
+/* Please work this time */
+.nav-menu li {position: relative;}
 
 .nav-menu .dropdown-menu {display: none;
     position: absolute;
@@ -94,71 +96,10 @@ footer {text-align: center;
 
 .nav-menu .dropdown:hover .dropdown-menu {display: block;}
 
-/* Grid layout */
-.gallery-grid {display: grid;
-    grid-template-columns: 1fr 2fr; /* 1/3 for description, 2/3 for images */
-    gap: 20px;
-    margin: 20px;
-    align-items: stretch;}
-
-/* Description container */
-.gallery-description {padding: 20px;
-    background-color: #f4f4f4; /* Contrasting background for description */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(255, 157, 157, 0.1);
-    height: 100%; /* Ensure equal height in grid */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    text-align: center;}
-
-/* Vertical gallery container */
-.vertical-gallery {display: flex;
-    flex-direction: column; /* Stack images vertically */
-    gap: 15px; /* Space between images */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    height: 100%; /* Ensure equal height in grid */
-    overflow-y: auto; /* Allow scrolling if content overflows */}
-
-/* Image and figure styling */
-.vertical-gallery figure {display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0;}
-
-.vertical-gallery img {max-width: 90%; /* Ensure the image does not exceed the container width */
-    max-height: 600px; /* Limit image height */
-    width: auto; /* Maintain aspect ratio */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);}
-
-.vertical-gallery figcaption {margin-top: 5px;
-    font-size: 0.9em;
-    color: #555;}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: 1fr; /* Stack the description and gallery vertically */
-    }
-
-    .vertical-gallery img {
-        max-width: 100%;
-        max-height: 120px; /* Smaller images for smaller screens */
-    }
-    .image-box {
-        grid-template-columns: 1fr; /* One image per row on smaller screens */
-    }
-}
 
 
+
+/* This came from codepen for the slider.  I edited it to match what I needed. */
 
 @keyframes slidy {
 0% { left: 0%; }
@@ -176,23 +117,24 @@ footer {text-align: center;
 }
   figure { 
     margin: 0; 
-    background: transparent; /* Remove the black background for figures */
-    font-family: Istok Web, sans-serif;
-    font-weight: 100;
+    background: transparent;*/
   }
   
 div#captioned-gallery { 
   width: 100%; overflow: hidden; 
 }
+
 figure.slider { 
   position: relative; width: 500%;
-  font-size: 0; animation: 35s slidy infinite; 
+  font-size: 0; animation: 35s slidy infinite;
 }
 figure.slider figure { 
   width: 20%; height: fit-content;
-  display: inline-block;  position: inherit; 
+  display: inline-block;  position: inherit;
 }
-figure.slider img { width: 100%; height: auto; }
+figure.slider img { width: 100%; height: auto;}
+
+
 figure.slider figure figcaption { 
   position: absolute; bottom: 0;
   background: rgba(0,0,0,0.4);
@@ -200,32 +142,103 @@ figure.slider figure figcaption {
   font-size: 2rem; padding: .6rem; 
 }
 
-/* Grid container for the main layout */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* 1/3 for description, 2/3 for images */
+
+/* Grid layout */
+.gallery-grid {display: grid;
+    grid-template-columns: 1fr 2fr; /* Left 1/3 for description, right 2/3 for images */
     gap: 20px;
     margin: 20px;
-    align-items: stretch; /* Ensure equal height */
-}
+    align-items: stretch;}
+
+/* Container for the left side of the screen where I wrote descriptions */
+.gallery-description {padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(255, 157, 157, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;}
+
+/* Callery for stacked images.  I experimented with several layouts and only used this one on the textures page. */
+.vertical-gallery {display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #f9f9f9;}
+
+.vertical-gallery figure {display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;}
+
+.vertical-gallery img {max-width: 90%;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);}
+
+.vertical-gallery figcaption {margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;}
+
+
 
 /* Grid box for the 3x2 image layout */
-.image-box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three images per row */
-    gap: 10px; /* Space between images */
-    background-color: #f9f9f9; /* Optional background color */
+.image-box {display: grid;
+    grid-template-columns: repeat(3, 1fr); /* This alligns it as three images per row. */
+    gap: 10px; 
+    background-color: #f9f9f9; 
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);}
 
-/* Style for the images inside the grid box */
-.image-box img {
-    width: 100%; /* Ensure images fit the grid cells */
-    height: auto; /* Maintain aspect ratio */
-    border: 1px solid #ccc; /* Optional border */
+.image-box img {width: 100%; 
+    height: auto; 
+    border: 1px solid #ccc; 
     border-radius: 5px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Optional shadow */
-}
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);}
+
+    /* Grid box for the 4 images in a row layout */
+.image-box2 {display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; 
+    background-color: #f9f9f9; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);}
+
+.image-box2 img {width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);}
+
+    /* Grid box for the 2 images in a row layout */
+.image-box3 {display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+    background-color: #f9f9f9; 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);}
+
+
+.image-box3 img {width: 100%; 
+    height: auto; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);}
