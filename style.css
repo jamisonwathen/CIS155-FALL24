@@ -1,6 +1,14 @@
+
+
+.lato-regular {
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 body {margin: 0; 
     padding: 0;
-    font-family: Helvetica, sans-serif;
+    font-family: Lato, sans-serif;
     line-height: 1.6;
     background-image: url(BLANK-PAGE-print.jpg);
     background-size: cover;
